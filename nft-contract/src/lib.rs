@@ -55,8 +55,8 @@ impl Contract {
         self.item_counter
     }
 
-    pub fn get_nft(&self, index:U64) -> Option<&NftData> {
-        self.nfts.get(index.0 as u32).clone()
+    pub fn get_nft(&self, index:U64) -> Option<NftData> {
+        self.nfts.get(index.0 as u32).cloned()
     }
 
     pub fn get_owner_of_contract(&self) -> AccountId {
